@@ -1,0 +1,72 @@
+levelGroup
+- id
+- group
+- image
+
+ordinalCoordenate
+- position
+- x
+- y
+
+simpleCoordenate
+- x
+- y
+
+seat
+- position = simpleCoordenate
+- seatGrabPosition = ordinalCoordenate
+- seatPath = ordinalCoordenate{}
+
+level
+- id
+- levelGroup = levelGroup
+- objectEntryCoordenates
+- conveyorPositionCount
+- conveyorPosition = ordinalCoordenate{}
+- seat = seat{}
+- maxCustomerWaiting
+- clientType = clientType{}
+- foodType = foodType{}
+- duration
+- rottenFood
+- invertConveyor
+- swapFoodCount
+- oneStarMinScore
+- twoStarMinScore
+- threeStartMinScore
+...
+
+foodType
+- id
+- description
+- surprise
+
+food
+- id
+- foodType = foodType
+- image
+- price
+- lifeDuration
+- eatDuration
+
+angryType
+- id
+- description
+- angryTime
+
+clientType
+- id
+- angryType = angryType 
+- description
+- numberOrderSatisfaction
+- numberHungerNeeded
+- foodTypeEaten = foodType{}
+- foodTypeOrdered = foodType
+- tipPercentage
+- eatTimePercentage
+
+client
+- id
+- clientType = clientType
+- image
+
