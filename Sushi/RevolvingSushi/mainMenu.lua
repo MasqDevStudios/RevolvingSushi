@@ -105,8 +105,8 @@ function sushiTap(e)
     transition.to(e.target, { time = 500, x = math.random(display.contentWidth), y = math.random(display.contentHeight), alpha = 0 } )
 end
 
-function sushiDispatcher(event)
-    sushiDispatcherCounter = sushiDispatcherCounter + 1
+function sushiDispatcher(event) --
+    sushiDispatcherCounter = sushiDipatcherCounter + 1
     sushiDispatcherList[sushiDispatcherCounter] = {}
     sushiDispatcherList[sushiDispatcherCounter] = display.newImage(math.random(24) .. ".png", 0, 0) -- VER ISTO!
     sushiDispatcherList[sushiDispatcherCounter]:addEventListener("tap", sushiTap)
